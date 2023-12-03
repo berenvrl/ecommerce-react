@@ -19,7 +19,7 @@ export default function App() {
   const [allproducts, setAllProducts] = useState([]);
   const [query, setQuery] = useState("");
   //adding item to cart
-  const [selectedid, setSelectedId] = useState(null);
+  // const [selectedid, setSelectedId] = useState(null);
   const [itemsAddedArray, setItemAddedArray] = useState([]);
   const [ordereditem, setOrderedItem] = useLocalStorageState([], "ordereditem");
 
@@ -30,7 +30,7 @@ export default function App() {
   }
 
   function handleAddCart(item) {
-    setSelectedId((currentid) => (currentid === item.id ? null : item.id));
+    //setSelectedId((currentid) => (currentid === item.id ? null : item.id));
 
     setItemAddedArray((itemsAddedArray) => [...itemsAddedArray, item]);
   }
