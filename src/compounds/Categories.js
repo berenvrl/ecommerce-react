@@ -15,7 +15,7 @@ export default function Categories({
 
   useEffect(function () {
     async function getallproducts() {
-      const res = await fetch("https://fakestoreapi.com/products/categories");
+      const res = await fetch("http://fakestoreapi.com/products/categories");
 
       const data = await res.json();
 
@@ -27,7 +27,7 @@ export default function Categories({
   useEffect(
     function () {
       async function seeAllProducts() {
-        const response = await fetch("https://fakestoreapi.com/products");
+        const response = await fetch("http://fakestoreapi.com/products");
         const data = await response.json();
         setAllProducts(data);
       }
