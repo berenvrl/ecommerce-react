@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Nav from "./Nav";
+import Nav from "../compounds/Nav";
+import Product from "./Product";
 
 function ProductList({
   products,
@@ -29,24 +30,6 @@ function ProductList({
         ))}
       </ul>
     </div>
-  );
-}
-function Product({ item, handleAddCart }) {
-  return (
-    <li className="item" key={item.id}>
-      <h3>{item.title}</h3>
-      <img src={item.image} alt={item.title} />
-      <p>{item.description}</p>
-      <p>
-        Price: <span> ${item.price}</span>
-      </p>
-      <p>
-        Rating⭐: <span>{`${item.rating.rate} (${item.rating.count})`}</span>
-      </p>
-      <button className="cartbtn" onClick={() => handleAddCart(item)}>
-        Add to cart
-      </button>
-    </li>
   );
 }
 

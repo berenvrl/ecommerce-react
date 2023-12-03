@@ -1,6 +1,7 @@
-import Nav from "./Nav";
+import Nav from "../compounds/Nav";
+import NoItems from "./NoItems";
+import AddedItem from "./AddedItem";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
 
 function Cart({
   itemsAddedArray,
@@ -11,7 +12,6 @@ function Cart({
   handleClickButtons,
 }) {
   const totalPrice = itemsAddedArray.reduce((acc, cur) => acc + cur.price, 0);
-  //console.log(totalPrice);
 
   return (
     <>
@@ -52,32 +52,4 @@ function Cart({
   );
 }
 
-function NoItems() {
-  const homeRef = useRef(null);
-  const handleClickHome = () => {
-    homeRef.current.click();
-  };
-
-  return (
-    <div className="noitems">
-      <h2>You have no items in your cart. Keep checking on our products!</h2>
-      <button onClick={() => handleClickHome()}>
-        <Link to="/" className="linkhome" ref={homeRef}>
-          {" "}
-          Keep Shopping &larr;
-        </Link>
-      </button>
-    </div>
-  );
-}
-function AddedItem({ added, handleDeleteAddedItem }) {
-  return (
-    <li>
-      <img src={added.image} alt={added.title} />
-      <p>{added.title}</p>
-      <p>${added.price}</p>
-      <button onClick={() => handleDeleteAddedItem(added)}>❌</button>
-    </li>
-  );
-}
 export default Cart;

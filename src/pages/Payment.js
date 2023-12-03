@@ -1,4 +1,4 @@
-import Nav from "../Nav";
+import Nav from "../compounds/Nav";
 import { useState, useRef } from "react";
 import Orders from "./Orders";
 import { Link } from "react-router-dom";

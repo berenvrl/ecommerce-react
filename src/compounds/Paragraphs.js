@@ -1,3 +1,5 @@
+import Paragraph from "./Paragraph";
+
 function Paragraphs() {
   return (
     <div className="paragraphs">
@@ -28,7 +30,5 @@ function Paragraphs() {
     </div>
   );
 }
-function Paragraph({ children }) {
-  return <div className="para">{children}</div>;
-}
+
 export default Paragraphs;

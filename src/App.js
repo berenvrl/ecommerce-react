@@ -1,20 +1,17 @@
 import React from "react";
 import "./App.css";
-import { useState, useRef, useEffect } from "react";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { useState, useRef } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useLocalStorageState } from "./compounds/useLocalStorageState";
 import HomePage from "./pages/Homepage";
-import Nav from "./Nav";
-import Logo from "./Logo";
-import Footer from "./Footer";
-import ProductList from "./ProductList";
+import Footer from "./compounds/Footer";
+import ProductList from "./pages/ProductList";
 import AllProducts from "./pages/AllProducts";
-import Cart from "./Cart";
-import Cookies from "./Cookies";
+import Cart from "./pages/Cart";
+import Cookies from "./compounds/Cookies";
 import FilteredPage from "./pages/FiteredPage";
-import CartSummary from "./CartSummary";
 import Payment from "./pages/Payment";
 import Orders from "./pages/Orders";
-import { useLocalStorageState } from "./useLocalStorageState";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -24,17 +21,7 @@ export default function App() {
   //adding item to cart
   const [selectedid, setSelectedId] = useState(null);
   const [itemsAddedArray, setItemAddedArray] = useState([]);
-
-  // const countRef = useRef(0);
-  // useEffect(
-  //   function () {
-  //     if (userRating) countRef.current += 1;
-  //   },
-  //   [userRating]
-  // );
-
   const [ordereditem, setOrderedItem] = useLocalStorageState([], "ordereditem");
-  //const [ordereditem, setOrderedItem] = useState([]);
 
   function handleDeleteAddedItem(selected) {
     setItemAddedArray((itemsAddedArray) =>
@@ -46,8 +33,6 @@ export default function App() {
     setSelectedId((currentid) => (currentid === item.id ? null : item.id));
 
     setItemAddedArray((itemsAddedArray) => [...itemsAddedArray, item]);
-
-    console.log(itemsAddedArray);
   }
 
   function handleDeleteOrdered(id) {
@@ -199,7 +184,7 @@ export default function App() {
         <Footer />
       </BrowserRouter>
 
-      {/* <Cookies /> */}
+      <Cookies />
     </div>
   );
 }
