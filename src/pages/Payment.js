@@ -1,6 +1,5 @@
 import Nav from "../compounds/Nav";
-import { useState, useRef } from "react";
-import Orders from "./Orders";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Payment({

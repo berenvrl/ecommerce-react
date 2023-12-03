@@ -1,7 +1,7 @@
 import Nav from "../compounds/Nav";
 import { Link } from "react-router-dom";
 import Rating from "../compounds/Rating";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Orders({
   ordereditem,

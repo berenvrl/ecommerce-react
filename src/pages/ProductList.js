@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Nav from "../compounds/Nav";
 import Product from "./Product";
 
