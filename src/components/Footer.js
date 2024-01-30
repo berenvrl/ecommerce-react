@@ -9,17 +9,17 @@ function Footer() {
   return (
     <footer className="footer">
       <button className="nav-btn footerbtn">Follow Us</button>
-      <div className="footerdiv">
-        <p>Journal</p>
-        <p>Help Center</p>
-        <p>Email Us</p>
-        <p>Privacy Policy</p>
-      </div>
+      <ul className="footerdiv">
+        <li>Journal</li>
+        <li>Help Center</li>
+        <li>Email Us</li>
+        <li>Privacy Policy</li>
+      </ul>
       <button className="upbtn" onClick={scrollTop}>
         &uarr;
       </button>
       <div className="rights">
-        <p> © 2023 All rights are reserved</p>
+        <p> © 2024 All rights are reserved</p>
       </div>
     </footer>
   );

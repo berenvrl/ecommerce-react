@@ -1,4 +1,4 @@
-import Nav from "../compounds/Nav";
+import Nav from "../components/Nav";
 import FilteredItem from "./FilteredItem";
 
 function FilteredPage({

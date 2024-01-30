@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Nav from "../compounds/Nav";
+import Nav from "../components/Nav";
 import Product from "./Product";
 
 function AllProducts({

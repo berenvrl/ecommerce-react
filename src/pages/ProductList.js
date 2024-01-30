@@ -1,4 +1,4 @@
-import Nav from "../compounds/Nav";
+import Nav from "../components/Nav";
 import Product from "./Product";
 
 function ProductList({

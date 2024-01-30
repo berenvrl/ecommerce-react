@@ -1,6 +1,6 @@
-import Nav from "../compounds/Nav";
+import Nav from "../components/Nav";
 import { Link } from "react-router-dom";
-import Rating from "../compounds/Rating";
+import Rating from "../components/Rating";
 import { useState } from "react";
 
 function Orders({

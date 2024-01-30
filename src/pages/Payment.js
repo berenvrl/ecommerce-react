@@ -1,4 +1,4 @@
-import Nav from "../compounds/Nav";
+import Nav from "../components/Nav";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

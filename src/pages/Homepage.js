@@ -1,11 +1,11 @@
-import Paragraphs from "../compounds/Paragraphs";
-import Nav from "../compounds/Nav";
-import ScrollBar from "../compounds/ScrollBar";
+import Paragraphs from "../components/Paragraphs";
+import Nav from "../components/Nav";
+import ScrollBar from "../components/ScrollBar";
 import MainPart from "./MainPart";
-import SearchBar from "../compounds/SearchBar";
-import PopularSearches from "../compounds/PopularSearches";
-import Brands from "../compounds/Brands";
-import Categories from "../compounds/Categories";
+import SearchBar from "../components/SearchBar";
+import PopularSearches from "../components/PopularSearches";
+import Brands from "../components/Brands";
+import Categories from "../components/Categories";
 
 function HomePage({
   selectedCategory,

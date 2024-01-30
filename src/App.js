@@ -2,13 +2,13 @@ import React from "react";
 import "./App.css";
 import { useState, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useLocalStorageState } from "./compounds/useLocalStorageState";
+import { useLocalStorageState } from "./components/useLocalStorageState";
 import HomePage from "./pages/Homepage";
-import Footer from "./compounds/Footer";
+import Footer from "./components/Footer";
 import ProductList from "./pages/ProductList";
 import AllProducts from "./pages/AllProducts";
 import Cart from "./pages/Cart";
-import Cookies from "./compounds/Cookies";
+import Cookies from "./components/Cookies";
 import FilteredPage from "./pages/FiteredPage";
 import Payment from "./pages/Payment";
 import Orders from "./pages/Orders";
@@ -18,8 +18,6 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [allproducts, setAllProducts] = useState([]);
   const [query, setQuery] = useState("");
-  //adding item to cart
-  // const [selectedid, setSelectedId] = useState(null);
   const [itemsAddedArray, setItemAddedArray] = useState([]);
   const [ordereditem, setOrderedItem] = useLocalStorageState([], "ordereditem");
 
@@ -30,8 +28,6 @@ export default function App() {
   }
 
   function handleAddCart(item) {
-    //setSelectedId((currentid) => (currentid === item.id ? null : item.id));
-
     setItemAddedArray((itemsAddedArray) => [...itemsAddedArray, item]);
   }
 
@@ -183,7 +179,6 @@ export default function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-
       <Cookies />
     </div>
   );
